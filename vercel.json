@@ -1,15 +1,14 @@
 {
-    "version": 2,
     "builds": [
         {
-            "src": "myapp/templates/index.html",
-            "use": "@vercel/static"
+            "src": "myproject/wsgi.py",
+            "use": "@vercel/python"
         }
     ],
     "routes": [
         {
             "src": "/(.*)",
-            "dest": "myapp/templates/index.html"
+            "dest": "myproject/wsgi.py"
         }
     ]
 }
